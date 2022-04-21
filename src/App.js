@@ -3,10 +3,10 @@ import { GlobalStyle } from "./utils/Global";
 
 const App = () => {
   return (
-    <main>
-      <PrimaryButton>Hi there</PrimaryButton>
-      <SecondaryButton>Hi there</SecondaryButton>
-      <TertiaryButton>Hi there</TertiaryButton>
+    <main> 
+      <PrimaryButton modifiers={"small"}>Hi there</PrimaryButton>
+      <SecondaryButton modifiers={["large","warning","warningSecondary"]}>Hi there</SecondaryButton>
+      <TertiaryButton >Hi there</TertiaryButton>
       <GlobalStyle/>
     </main>
   );
