@@ -1,11 +1,6 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import {
-  SecondaryButton,
-  TertiaryButton,
-  PrimaryButton,
-  SignUpModal,
-} from "./components";
+import { SignUpModal } from "./components";
 import { darkTheme, defaultTheme } from "./utils";
 import { GlobalStyle } from "./utils/Global";
 
@@ -42,10 +37,10 @@ const App = () => {
           background: useDarkTheme
             ? darkTheme.primaryColor
             : defaultTheme.primaryColor,
-          width: "100vw",
+          width: "100%",
           height: "100vh",
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "center",
           alignItems: "center",
         }}
       >
