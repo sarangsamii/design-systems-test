@@ -1,18 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { typeScale, PrimaryFont } from "../utils";
-import { Images,CloseIcon } from "../assets";
+import { Images, CloseIcon } from "../assets";
 import { PrimaryButton } from "./index";
-
-
+import { useSpring, animated } from "react-spring";
 
 const ModalWrapper = styled.div`
   width: 800px;
   height: 500px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   font-family: ${PrimaryFont};
-  background-color: ${props => props.theme.formElementBackground};
-  color: ${props => props.theme.textOnFormElementBackground};
+  background-color: ${(props) => props.theme.formElementBackground};
+  color: ${(props) => props.theme.textOnFormElementBackground};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,8 +48,10 @@ const CloseModalButton = styled.button`
 `;
 
 export const SignUpModal = ({ showModal, setShowModal }) => {
+  const styles = useSpring({ opacity: showModal ? 1 : 0 });
+
   return (
-   
+    <animated.div style={styles}>
       <ModalWrapper>
         <img src={Images.loginImg} alt="Sign up for an account!" />
         <ModalHeader>Sign Up</ModalHeader>
@@ -67,8 +68,6 @@ export const SignUpModal = ({ showModal, setShowModal }) => {
           <CloseIcon />
         </CloseModalButton>
       </ModalWrapper>
-
+    </animated.div>
   );
 };
-
-
