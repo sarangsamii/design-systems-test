@@ -3,7 +3,7 @@ import { create } from "@storybook/theming/create";
 export default create({
   base: "light",
 
-  colorPrimary: "hotpink",
+  colorPrimary: "blue",
   colorSecondary: "deepskyblue",
 
   // UI
@@ -23,7 +23,7 @@ export default create({
   // Toolbar default and active colors
   barTextColor: "silver",
   barSelectedColor: "black",
-  barBg: "hotpink",
+  barBg: "blue",
 
   // Form colors
   inputBg: "white",
